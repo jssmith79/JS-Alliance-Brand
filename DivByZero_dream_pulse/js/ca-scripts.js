@@ -7,19 +7,28 @@ function addCustomerName() {
     title.textContent = customerName;
     
     // <h1 id="tm-header" class="tm-brand text-uppercase"></h1> <!--todo: Add Customer Name-->
-
+    let header = document.getElementById('tm-header')
+    header.textContent = customerName;
     // <h2 id="introheader" class="tm-section-title mb-5 text-uppercase tm-color-primary"></h2> <!--todo: Add Customer Name-->
+    let introHeader = document.getElementById('introheader')
+    introHeader.textContent = customerName;
 
 };
 
 function toggleColors() {
     // <!-- todo: Change all classes named 'tm-white-rect' to 'tm-blue-rect' -->
+    let el = document.querySelectorAll('.tm-white-rect');
 
+    for (i = 0; i < el.length; i++) {
+        el[i].classList.add('tm-blue-rect');
+        el[i].classList.remove('tm-white-rect');
+    }
 };
 
 function hideElement() {
     //<ul class="nav flex-row tm-social-links">  <!--todo: Hide social links-->
-
+    var socialLink = document.querySelector('.tm-social-links');
+    socialLink.style.visibility = "none";
 };
 
  function addText() {
